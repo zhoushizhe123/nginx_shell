@@ -143,8 +143,7 @@ cd /usr/local/nginx/conf && find / -name nginx.conf -exec cp {} ./ \;
 echo -e "\033[32m =====安装完毕===== \033[0m"
 nginx -t
 if [ $? -eq 0 ];then  
-	echo -e "\033[32m =====配置文件正确，启动nginx成功===== \033[0m"
-	nginx && echo "启动成功" || echo "启动失败"
+	echo -e "\033[32m =====配置文件正确，请启动===== \033[0m"
 else
 	echo -e "\033[32m =====配置文件错误，请检查===== \033[0m"
 fi
