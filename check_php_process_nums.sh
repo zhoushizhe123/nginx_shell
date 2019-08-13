@@ -6,4 +6,4 @@
 # Description：该脚本用于获取php进程数并push到open-falcon。
 # --------------------------------------------------------------------
 code=`ps -aux | grep -i php | grep -v grep | wc -l`
-curl -X POST -d "[{\"metric\": \"php-nums-\$code\", \"endpoint\": \"`hostname`\", \"timestamp\": `date +%s`,\"step\": 60,\"value\": 1,\"counterType\": \"GAUGE\",\"tags\": \"\"}]" http://127.0.0.1:1988/v1/pus
+curl -X POST -d "[{\"metric\": \"php-nums-$code\", \"endpoint\": \"`hostname`\", \"timestamp\": `date +%s`,\"step\": 60,\"value\": 1,\"counterType\": \"GAUGE\",\"tags\": \"\"}]" http://127.0.0.1:1988/v1/push
