@@ -1,0 +1,4 @@
+location ^~ /.well-known/acme-challenge {
+            access_log         /usr/local/nginx/logs/ssl.log json;
+            proxy_pass         http://23.101.8.69;
+        }
