@@ -139,8 +139,6 @@ echo -e "\033[32m 安装完成 \033[0m"
 #########修改配置文件###########
 mv /usr/local/nginx/conf/nginx.conf /usr/local/nginx/conf/nginx.conf-back
 cd /usr/local/nginx/conf && find / -name nginx.conf -exec cp {} ./ \;
-cd /usr/local/nginx/conf.d && find / -name test.conf -exec cp {} ./ \;
-cd /usr/local/nginx/conf && find / -name sslreq.txt -exec cp {} ./ \;
 
 echo -e "\033[32m =====安装完毕===== \033[0m"
 nginx -t
